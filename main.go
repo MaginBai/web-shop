@@ -1,7 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	_ "github.com/lib/pq"
+)
 
 func main() {
-	fmt.Println("Hello Wolrd!")
+	err := connect()
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+	fmt.Println(cfg)
+	_, err = db.Exec(`INSERT INTO "test" ("name") VALUES('Arthur')`)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
 }

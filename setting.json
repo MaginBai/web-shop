@@ -1,0 +1,7 @@
+{
+    "PgHost": "172.17.0.2",
+    "PgPort": "5432",
+    "PgUser": "postgres",
+    "PgPassword": "12345",
+    "PgBase": "web_shop"
+}
