@@ -1,7 +1,12 @@
 {
-    "PgHost": "172.17.0.2",
+    "ServerHost": "127.0.0.1",
+    "ServerPort": "8080",
+    "PgHost": "localhost",
     "PgPort": "5432",
     "PgUser": "postgres",
     "PgPassword": "12345",
-    "PgBase": "web_shop"
+    "PgBase": "web_shop",
+    "Data": "./data/",
+    "Assets": "./assets/",
+    "Html": "./html/"
 }

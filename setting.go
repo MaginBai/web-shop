@@ -7,11 +7,16 @@ import (
 )
 
 type setting struct {
+	ServerHost string
+	ServerPort string
 	PgHost     string
 	PgPort     string
 	PgUser     string
 	PgPassword string
 	PgBase     string
+	Data       string
+	Assets     string
+	Html       string
 }
 
 var cfg setting
