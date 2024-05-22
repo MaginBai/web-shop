@@ -25,7 +25,7 @@ body {
 
 .header {
   min-height: 705px;
-  background-image: url(/data/image/bridge.png);
+  background-image: url(/image/bridge.png);
   color: white;
   padding-top: 10px;
 }
@@ -161,17 +161,15 @@ h2 {
 }
 
 .product_row {
-  display: flex;
+  display: flexbox;
   justify-content: space-between;
   -moz-column-gap: 20px;
        column-gap: 20px;
-  margin-bottom: 20px;
 }
 
 .product_container {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
-  text-align: center;
 }
 
 .product-card {
@@ -210,11 +208,8 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  text-align: left;
+  align-items: center;
   padding: 20px;
-}
-.product-info p {
-  font-size: 14px;
 }
 
 .product-card:hover .product-info {
@@ -347,4 +342,23 @@ h2 {
 .footer_social a {
   width: 44px;
   height: 44px;
+}/*# sourceMappingURL=main.css.map */olor: #ED555A;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.popular-products .popular-product .popular-product-text ul .popular-product-buy:hover {
+  background-color: #ED555A;
+  color: white;
+}
+
+.news .name-news {
+  background-color: #ED555A;
+  color: white;
+  display: flex;
+  padding-left: 40px;
+  height: 40px;
+  align-items: center;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  font-size: 18px;
 }/*# sourceMappingURL=main.css.map */
