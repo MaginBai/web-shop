@@ -6,7 +6,6 @@
     "PgUser": "postgres",
     "PgPassword": "12345",
     "PgBase": "web_shop",
-    "Data": "./data/",
     "Assets": "./assets/",
     "Html": "./html/"
 }

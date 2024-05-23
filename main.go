@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 
-	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq"
 )
@@ -18,7 +17,7 @@ func main() {
 	}
 	router = gin.Default()
 	router.Static("/assets", cfg.Assets)
-	router.Use(static.Serve("/", static.LocalFile(cfg.Data, false)))
+	// router.Use(static.Serve("/", static.LocalFile(cfg.Data, false)))
 	router.LoadHTMLFiles(cfg.Html + "index.html")
 	router.GET("/", index)
 	router.Run(cfg.ServerHost + ":" + cfg.ServerPort)

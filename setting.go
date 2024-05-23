@@ -14,7 +14,6 @@ type setting struct {
 	PgUser     string
 	PgPassword string
 	PgBase     string
-	Data       string
 	Assets     string
 	Html       string
 }

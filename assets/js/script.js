@@ -11,9 +11,20 @@ for (let anchor of anchors) {
         })
     })
 }
+//HEADER
+
+const header = document.getElementById("header_top")
+
+window.addEventListener("scroll", function () {
+    const scrollPos = window.scrollY
 
 
-
+    if (scrollPos > 600) {
+        header.classList.add("header_shadow")
+    } else {
+        header.classList.remove("header_shadow")
+    }
+})
 
 //FAQ
 let coll = document.getElementsByClassName("faq_btn")
@@ -28,3 +39,33 @@ for (let i = 0; i < coll.length; i++) {
         }
     })
 }
+//MODAL feedback
+document.getElementById("btn-modal-open-feeback").addEventListener("click", function () {
+    document.getElementById("modal-feedback").classList.add("open")
+    document.getElementById("body").classList.add("no-scroll");
+})
+document.getElementById("btn-modal-open-feeback1").addEventListener("click", function () {
+    document.getElementById("modal-feedback").classList.add("open")
+    document.getElementById("body").classList.add("no-scroll");
+})
+
+document.getElementById("btn-modal-close").addEventListener("click", function () {
+    document.getElementById("modal-feedback").classList.remove("open")
+    document.getElementById("body").classList.remove("no-scroll");
+})
+// Close Escape
+window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        document.getElementById("modal-feedback").classList.remove("open")
+        document.getElementById("body").classList.remove("no-scroll");
+    }
+});
+//Close area
+document.querySelector("#modal-feedback .feedback_container").addEventListener("click", event => {
+    event._isClickWithInModal = true;
+});
+document.getElementById("modal-feedback").addEventListener("click", event => {
+    if (event._isClickWithInModal) return;
+    event.currentTarget.classList.remove("open");
+    document.getElementById("body").classList.remove("no-scroll");
+});
